@@ -37,5 +37,36 @@ module.exports = async (app) => {
     /**
      * Development URL
      */
-    .serve('http://example.test:3000');
+    .serve('http://example.test:3000')
+
+    /**
+     * Generate WordPress `theme.json`
+     *
+     * @note This overwrites `theme.json` on every build.
+     */
+    .themeJson({
+      color: {
+        custom: false,
+        customGradient: false,
+      },
+      custom: {
+        spacing: {},
+        typography: {
+          'font-size': {},
+          'line-height': {},
+        },
+      },
+      spacing: {
+        padding: true,
+        units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
+      },
+      typography: {
+        customFontSize: false,
+      },
+    })
+
+    /**
+     * Set `theme.json` colors from `tailwind.config.js` values
+     */
+    .useTailwindColors();
 };
