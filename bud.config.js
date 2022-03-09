@@ -48,6 +48,8 @@ module.exports = async (app) => {
       color: {
         custom: false,
         customGradient: false,
+        defaultPalette: false,
+        defaultGradients: false,
       },
       custom: {
         spacing: {},
