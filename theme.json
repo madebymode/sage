@@ -5,6 +5,8 @@
     "color": {
       "custom": false,
       "customGradient": false,
+      "defaultPalette": false,
+      "defaultGradients": false
       "palette": [
         {
           "name": "Primary",
